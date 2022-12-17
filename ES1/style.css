@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 20px;
+    background-color: whitesmoke;
+}
+
+.container {
+    width: 502px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    position: relative;
+}
+
+.container .content-btns {
+    position: absolute;
+    /* queste impostazioni lo rendono grande come il contenitore */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0; /* inizialmente il contenitore dei pulsanti è invisibile */
+    transition: opacity 1s linear 0.2s;
+}
+
+.container:hover .content-btns {
+    opacity: 1; /* rendiamo visibile il contenitore dopo la transazione */
+}
+
+.container .content-btns #save-btn {
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+    background-color: red;
+    width: 150px;
+    height: 75px;
+    border-radius: 35px;
+    border: none;
+    position: absolute;
+    top: 0px;
+    right: 60px;
+    transition: top 1s linear 0.2s;
+}
+
+.container:hover .content-btns #save-btn {
+    top: 70px; /* il pulsante save si sposterà dall'alto verso il basso durante la transazione */
+}
+
+.container .content-btns .down-button {
+    font-size: 25px;
+    font-weight: 800;
+    color: black;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 0px;
+    transition: bottom 1s linear 0.2s;
+}
+
+.container:hover .content-btns .down-button {
+    bottom: 70px; /* i pulsanti in basso si sposteranno dal basso verso l'alto durante la transazione */
+}
+
+.container .content-btns #arrow-up-right {
+    width: 250px;
+    height: 50px;
+    left: 60px;
+}
+
+.container .content-btns #share {
+    width: 50px;
+    height: 50px;
+    left: 330px;
+}
+
+.container .content-btns #menu {
+    width: 50px;
+    height: 50px;
+    left: 400px;
+}
